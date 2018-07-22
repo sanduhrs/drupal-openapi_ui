@@ -1,3 +1,5 @@
+# OpenAPI UI
+
 The OpenAPI UI module implements an API around displaying OpenAPI specs inside a
 Drupal site. This library implements a plugin base which can be used to
 initialize a API explorer UI within your site. This module does not come with
