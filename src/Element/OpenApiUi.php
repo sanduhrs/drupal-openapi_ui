@@ -103,7 +103,7 @@ class OpenApiUi extends RenderElement {
     }
     // If the schema is a string, convert it to a URL object.
     if (is_string($schema)) {
-      $schema = Url::formUri($schema);
+      $schema = Url::fromUri($schema);
       $element['#openapi_schema'] = $schema;
     }
     // If schema is not a complient array or a URL, quit rendering.
