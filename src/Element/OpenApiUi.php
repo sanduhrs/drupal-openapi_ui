@@ -83,6 +83,7 @@ class OpenApiUi extends RenderElement {
    *   A renderable array.
    */
   public static function preRenderOpenApiUi(array $element) {
+    $messenger = \Drupal::service('messeneger');
     $plugin = $element['#openapi_ui_plugin'];
     // If the plugin id was passed, get the plugin instance.
     if (is_string($plugin) && !empty($plugin)) {
@@ -91,7 +92,7 @@ class OpenApiUi extends RenderElement {
       $element['#openapi_ui_plugin'] = $plugin;
     }
     if (!($plugin instanceof OpenApiUiInterface)) {
-      drupal_set_message(t('Unknown OpenAPI UI plugin being used.'), 'error');
+      $messenger->addError(t('Unknown OpenAPI UI plugin being used.'));
       return $element;
     }
 
@@ -108,7 +109,7 @@ class OpenApiUi extends RenderElement {
     }
     // If schema is not a complient array or a URL, quit rendering.
     if (!(is_array($schema) || $schema instanceof Url)) {
-      drupal_set_message(t('Invalid schema source provided.'), 'error');
+      $messenger->addError(t('Invalid schema source provided.'));
       return $element;
     }
 
