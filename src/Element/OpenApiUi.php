@@ -83,7 +83,7 @@ class OpenApiUi extends RenderElement {
    *   A renderable array.
    */
   public static function preRenderOpenApiUi(array $element) {
-    $messenger = \Drupal::service('messeneger');
+    $messenger = \Drupal::service('messenger');
     $plugin = $element['#openapi_ui_plugin'];
     // If the plugin id was passed, get the plugin instance.
     if (is_string($plugin) && !empty($plugin)) {
