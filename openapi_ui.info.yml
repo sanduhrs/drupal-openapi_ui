@@ -2,4 +2,5 @@ name: OpenAPI UI
 type: module
 description: Provides plugin system for OpenAPI/Swagger Interface libraries.
 core: 8.x
+core_version_requirement: '^8 || ^9'
 package: OpenAPI
