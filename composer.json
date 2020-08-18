@@ -1,0 +1,12 @@
+{
+    "name": "drupal/openapi_ui",
+    "description": "Provides plugin system for OpenAPI/Swagger Interface libraries.",
+    "type": "drupal-module",
+    "homepage": "https://www.drupal.org/project/openapi_ui",
+    "license": "GPL-2.0+",
+    "support": {
+      "issues": "https://www.drupal.org/project/issues/openapi_ui",
+      "source": "https://www.drupal.org/project/openapi_ui"
+    }
+  }
+  
